@@ -1,0 +1,6 @@
+#Step 4 - Create a new dataset and preview
+#create a new sub-dataset for the United States, since we will be focusing on this Country
+After identifying the most populated country, the United States, for our data source, Then we can break that down further to
+#different states in the united states
+US_data = raw_data[raw_data["Country"] == "United States"]
+US_data.head()
