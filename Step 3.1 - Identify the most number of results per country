@@ -1,4 +1,4 @@
-#Step 3 - Identify the most number of results in the dataset per country, then sorting it from highest to lowest
+#Step 3.1 - Identify the most number of results in the dataset per country, then sorting it from highest to lowest
 clean_data = raw_data.groupby("Country")["treatment"].count().reset_index()
 clean_data.sort_values("treatment", ascending = False, inplace = True)
 
