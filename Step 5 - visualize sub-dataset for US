@@ -1,0 +1,10 @@
+#Then visualize the dataset above
+count_USstates = Counter(US_data['state'].dropna().tolist()).most_common(10)
+state_idx = [state[0] for state in count_USstates]
+state_val = [state[1] for state in count_USstates]
+fig,ax = plt.subplots(figsize=(8,6))
+sns.barplot(x = state_idx, y= state_val, ax = ax)
+plt.title('Top ten states')
+plt.xlabel('States')
+plt.ylabel('Count')
+ticks = plt.setp(ax.get_xticklabels(),rotation=90)
