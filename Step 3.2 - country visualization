@@ -1,4 +1,4 @@
-#Step 3.1 - Afterwards, I visualized this data to identify which Country has the largest population for the dataset 
+#Step 3.2 - Afterwards, I visualized this data to identify which Country has the largest population for the dataset 
 count_country = Counter(raw_data['Country'].dropna().tolist()).most_common(10)
 country_idx = [country[0] for country in count_country]
 country_val = [country[1] for country in count_country]
