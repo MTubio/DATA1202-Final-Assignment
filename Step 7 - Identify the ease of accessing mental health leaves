@@ -1,0 +1,36 @@
+#Lastly, identify the ease of approaching employers regarding Mental Health leaves
+fig,ax = plt.subplots(figsize=(8,6))
+total = CA_data['leave'].dropna().shape[0] * 1.0
+leave_count  = Counter(CA_data['leave'].dropna().tolist())
+for key,val in leave_count.items():
+    leave_count[key] = leave_count[key] / total
+leave_group = np.asarray(list(leave_count.keys()))
+leave_val = np.asarray(list(leave_count.values()))
+sns.barplot(x = leave_group , y = leave_val)
+plt.title('leave ratio in California')
+plt.ylabel('Count of prospective leaves')
+plt.xlabel('Leave')
+
+fig,ax = plt.subplots(figsize=(8,6))
+total = WA_data['leave'].dropna().shape[0] * 1.0
+leave_count  = Counter(WA_data['leave'].dropna().tolist())
+for key,val in leave_count.items():
+    leave_count[key] = leave_count[key] / total
+leave_group = np.asarray(list(leave_count.keys()))
+leave_val = np.asarray(list(leave_count.values()))
+sns.barplot(x = leave_group , y = leave_val)
+plt.title('leave ratio in Washington')
+plt.ylabel('Count of prospective leaves')
+plt.xlabel('Leave')
+
+fig,ax = plt.subplots(figsize=(8,6))
+total = NY_data['leave'].dropna().shape[0] * 1.0
+leave_count  = Counter(NY_data['leave'].dropna().tolist())
+for key,val in leave_count.items():
+    leave_count[key] = leave_count[key] / total
+leave_group = np.asarray(list(leave_count.keys()))
+leave_val = np.asarray(list(leave_count.values()))
+sns.barplot(x = leave_group , y = leave_val)
+plt.title('leave ratio in New York')
+plt.ylabel('Count of prospective leaves')
+plt.xlabel('Leave')
