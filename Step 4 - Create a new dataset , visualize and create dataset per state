@@ -1,0 +1,24 @@
+#Step 4 - Create a new dataset and preview
+#create a new sub-dataset for the United States, since we will be focusing on this Country
+#After identifying the most populated country, the United States, for our data source, Then we can break that down further to
+#different states in the united states
+
+US_data = raw_data[raw_data["Country"] == "United States"]
+US_data.head()
+
+#Step 4.2 - Then visualize the dataset above
+count_USstates = Counter(US_data['state'].dropna().tolist()).most_common(10)
+state_idx = [state[0] for state in count_USstates]
+state_val = [state[1] for state in count_USstates]
+fig,ax = plt.subplots(figsize=(8,6))
+sns.barplot(x = state_idx, y= state_val, ax = ax)
+plt.title('Top ten states')
+plt.xlabel('States')
+plt.ylabel('Count')
+ticks = plt.setp(ax.get_xticklabels(),rotation=90)
+
+# Create a dataset for the states that we identified in step 4.2
+CA_data = US_data[US_data ["state"] == "CA"]
+WA_data = US_data[US_data ["state"] == "WA"]
+NY_data = US_data[US_data ["state"] == "NY"]
+
