@@ -34,3 +34,5 @@ sns.barplot(x = leave_group , y = leave_val)
 plt.title('leave ratio in New York')
 plt.ylabel('Count of prospective leaves')
 plt.xlabel('Leave')
+
+#From here we can infer that the lion share of employees do not know of mental heath leave
