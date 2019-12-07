@@ -1,6 +1,0 @@
-#Step 6 - Create sub-data for the top 3 states in the US
-#We have identified that California, Washington, and New York are the top 3 states in the US.
-#Then create sub-datasets below.
-CA_data = US_data[US_data ["state"] == "CA"]
-WA_data = US_data[US_data ["state"] == "WA"]
-NY_data = US_data[US_data ["state"] == "NY"]

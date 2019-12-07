@@ -1,0 +1,11 @@
+#Step 6 - Identify employers who offer mental health benefits
+sns.countplot(CA_data['benefits'] == "Yes")
+plt.title("Are benefits offered by your employer in California?")
+
+sns.countplot(WA_data['benefits'] == "Yes")
+plt.title("Are benefits offered by your employers in Washington?")
+
+sns.countplot(NY_data['benefits'] == "Yes")
+plt.title("Are benefits offered by your employers in New York?")
+
+#From here we can identify the employers per state who offer employee mental health benefits
