@@ -1,0 +1,11 @@
+#We first identify people in California, Washington and New York who marked yes in seeking mental health treatment
+sns.countplot(CA_data['treatment'] == "Yes")
+plt.title("Number of people in California seeking Treatment")
+
+sns.countplot(WA_data['treatment'] == "Yes")
+plt.title("Number of people in Washington seeking Treatment")
+
+sns.countplot(NY_data['treatment'] == "Yes")
+plt.title("Number of people in New York seeking Treatment")
+#From here we can identify that most people in the top 3 states were seeking treatment, and with New York having the lesser number of people
+#seeking treatment. In contrast California is the highest state among the three for people who are seeking mental health treatment
